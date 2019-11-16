@@ -9,6 +9,7 @@ import java.util.List;
 import static org.junit.Assert.*;
 import ohtu.io.*;
 import ohtu.data_access.*;
+import ohtu.domain.User;
 import ohtu.services.*;
 
 public class Stepdefs {
@@ -28,6 +29,16 @@ public class Stepdefs {
     @Given("^command login is selected$")
     public void commandLoginSelected() throws Throwable {
         inputLines.add("login");
+    }
+    
+    @Given("user {string} with password {string} is created")
+    public void userAlreadyCreated(String username, String password) throws Throwable {
+        userDao.add(new User(username, password));
+    }
+    
+    @Given("^command new is selected$")
+    public void commandNewSelected() throws Throwable {
+        inputLines.add("new");
     }
 
     @When("username {string} and password {string} are entered")
