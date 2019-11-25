@@ -1,80 +1,94 @@
 package ohtu;
 
+import java.util.HashMap;
+
 public class TennisGame {
     
-    private int m_score1 = 0;
-    private int m_score2 = 0;
+    private int player1Score = 0;
+    private int player2Score = 0;
     private String player1Name;
     private String player2Name;
-
+    private HashMap<Integer, String> scoreName;
+    
     public TennisGame(String player1Name, String player2Name) {
         this.player1Name = player1Name;
         this.player2Name = player2Name;
+        this.scoreName = new HashMap<>();
+        initializeStrings();
     }
 
+    private void initializeStrings() {
+        scoreName.put(0, "Love");
+        scoreName.put(1, "Fifteen");
+        scoreName.put(2, "Thirty");
+        scoreName.put(3, "Forty");
+    }
+    
     public void wonPoint(String playerName) {
-        if (playerName == "player1")
-            m_score1 += 1;
+        if (playerName.equals(player1Name))
+            player1Score += 1;
         else
-            m_score2 += 1;
+            player2Score += 1;
     }
 
+    private boolean gameIsEqual() {
+        if (player1Score == player2Score) return true;
+        return false;
+    }
+    
+    private boolean playerHasOverFour() {
+        if (player1Score >=4 || player2Score >=4) return true;
+        return false;
+    }
+    
+    public String scoreToString(int scoreToString) {
+        return scoreName.get(scoreToString);
+    }
+    
+    public String tieHandler() {
+        if (player1Score < 4) {
+            return scoreToString(player1Score) + "-All";
+        } else {
+            return "Deuce"; 
+        }
+    }
+    
+    public String winnerHandler() {
+        if (player1Score > player2Score) {
+            return "Win for player1";
+        } else {
+            return "Win for player2";
+        }
+    }
+    
+    public String advantageHandler() {
+        if (player1Score > player2Score) {
+            return "Advantage player1";
+        } else {
+            return "Advantage player2";
+        }
+    }
+    
+    public String overFourHandler() {
+        int scoreDifference = Math.abs(player1Score - player2Score);
+        if (scoreDifference < 2) {
+            return advantageHandler();
+        } else {
+            return winnerHandler();
+        }
+    }
+    
+    public String generalScoreHandler() {
+        return scoreToString(player1Score) + "-" + scoreToString(player2Score);
+    }
+    
     public String getScore() {
-        String score = "";
-        int tempScore=0;
-        if (m_score1==m_score2)
-        {
-            switch (m_score1)
-            {
-                case 0:
-                        score = "Love-All";
-                    break;
-                case 1:
-                        score = "Fifteen-All";
-                    break;
-                case 2:
-                        score = "Thirty-All";
-                    break;
-                case 3:
-                        score = "Forty-All";
-                    break;
-                default:
-                        score = "Deuce";
-                    break;
-                
-            }
+        if (gameIsEqual()) {
+            return tieHandler();
+        } else if (playerHasOverFour()) {
+            return overFourHandler();
+        } else {
+            return generalScoreHandler();
         }
-        else if (m_score1>=4 || m_score2>=4)
-        {
-            int minusResult = m_score1-m_score2;
-            if (minusResult==1) score ="Advantage player1";
-            else if (minusResult ==-1) score ="Advantage player2";
-            else if (minusResult>=2) score = "Win for player1";
-            else score ="Win for player2";
-        }
-        else
-        {
-            for (int i=1; i<3; i++)
-            {
-                if (i==1) tempScore = m_score1;
-                else { score+="-"; tempScore = m_score2;}
-                switch(tempScore)
-                {
-                    case 0:
-                        score+="Love";
-                        break;
-                    case 1:
-                        score+="Fifteen";
-                        break;
-                    case 2:
-                        score+="Thirty";
-                        break;
-                    case 3:
-                        score+="Forty";
-                        break;
-                }
-            }
-        }
-        return score;
     }
 }
