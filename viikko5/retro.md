@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-muutos
-muutos 2
-muutos 3
-=======
 # Tehtävä 6: Retrospektiivitekniikat
 
 Scrumissa sprintin päätteksi pidettävässä retrospektiivissä tarkastellaan ryhmän omia työskentelytapoja pyrkien niiden kehittämiseen. Retrospektiivin toteuttamiseen on useita mahdollisuuksia. Tarkastelemme tässä lyhyesti niistä kahta: “Start, Stop, Continue, More of, Less of Wheel” sekä “Glad, Sad, Mad”.
@@ -16,4 +11,3 @@ Glad, Sad, Mad -retrospektiivitekniikassa havaintoja tehdään sprintin aikana. 
 http://retrospectivewiki.org/index.php?title=Start,_Stop,_Continue,_More_of,_Less_of_Wheel
 
 http://retrospectivewiki.org/index.php?title=Glad,_Sad,_Mad
->>>>>>> e276d1635bb9e611d9592653cdcabfbc87d09375
