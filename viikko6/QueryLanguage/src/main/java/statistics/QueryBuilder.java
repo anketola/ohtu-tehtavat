@@ -10,6 +10,7 @@ import statistics.matcher.And;
 import statistics.matcher.HasAtLeast;
 import statistics.matcher.HasFewerThan;
 import statistics.matcher.Matcher;
+import statistics.matcher.Or;
 import statistics.matcher.PlaysIn;
 
 /**
@@ -42,5 +43,10 @@ public class QueryBuilder {
     this.matcher = new And(this.matcher, new HasFewerThan(score, category));
     return this;
   }
-    
+  
+  public QueryBuilder oneOf(Matcher... matchers) {
+    this.matcher = new Or(matchers);
+    return this;
+  }
+  
 }
