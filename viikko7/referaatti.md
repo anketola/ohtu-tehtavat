@@ -1,0 +1,14 @@
+## Referaatti
+### Craig Larman & Bas Vodde : Lean Primer, Version 1.6
+
+http://www.leanprimer.com/downloads/lean_primer.pdf, haettu 10.12.2019
+
+Kirjoittajat aloittavat leanin esittelyn viestinjuoksun metaforalla. Heidän kritiikkinsä on, että perinteisessä hallinnossa ja prosesseissa huomio kiinnitetään juoksijoihin. Huomio kiinnitetään esimerkiksi siihen, kuinka kiireisiltä juoksijat vaikuttavat. Mittarina tässä voisi olla mahdollisesti kapulan odottamiseen kuluva aika. Sen sijaan he esittävät leanin takana olevan perusajatuksen huomion kiinnittämiseksi juoksijoiden sijaan viestikapulaan. Tämä tarkoittaa tiivistetysti sitä, että tuottavuuden mittana leanissa on asiakkaalle todellisuudessa tuotettu arvo.
+
+Kirjoituksessa esitellään useita leaniin kuuluvia elementtejä. Keskeinen näistä näistä on leanin kaksi pilaria. Ensimmäisen pilari edellyttää ihmisten kunnioittamista (”Respect for People”). Tässä ihmiset on määritelty laajasti, käsite kattaa muun muassa varsinaiset asiakkaat, yhteistyökumppanit, johtajien suhteen muihin työntekijöihin. Toisaalta ihmisten kunnioittamiseen on luokiteltu myös näkökulmia, jotka edellyttävät työntekijöiden ja työkulttuurin kehittämistä. Näin ollen leanin toisena pilarina oleva jatkuva kehittyminen (”Continous Improvement”) näyttäytyy kiinteässä yhteydessä ensimmäiseen pilariin.
+
+Toisen pilarin, jatkuva kehittyminen, ensimmäiseksi keskeisiksi ajatuksiksi listataan ”Go See”, jolla viitataan johdon toimintatapaan olla läsnä varsinaisella työkentällä. Tämä on vastakohta sille, että ongelmia ratkaistaisiin yksinomaan ns. pöydän takana istumalla. Toiseen pilariin kuuluu lisäksi ”Kaizen. Tämän selitetään tarkoittavan jatkuvaa kehittymistä, mutta eroavan osittain saman nimisestä pilarista. Kaizenin idean kiteyttää ehkä parhaiten teoksessakin käytetty lainaus ”Improve for improvenet’s sake, endlessly”. Kaizenin ideaan liitetään useita elementtejä muitakin elementtejä kuten kaizen-tapaamiset ja viisi ”miksi”-kysymystä.
+
+Kaikkiaan leaniin kuuluu lisäksi elementtejä liittyen esimerkiksi erilaisiin hukkien käsitteisiin ja tuotteiden virtaamisen optimointiin. Yksittäisten elementtien – jotka eivät lyhyeen referaattiin mitenkään kaikki mahdu – oleellisempaa on kiinnittää ehkä huomiota kirjoittajien lopputoteamukseen leanista. Kokonaisuutena kirjoittajat painottavat sitä, että kyseessä ei ole kokoelma työkaluja, vaan lean on kattava järjestelmä, joka edellyttää keskeisten periaatteiden laajaa ja syvällistä, jopa vuosia kestävää sisäistämistä. 
+
+Toisaalta tekstin perusteella lean ei näytä sisältävän tarkkaa hierarkista järjestystä tai erottelua erilaisten elementtien välillä. Näin ollen lean on ehkä paras ymmärtää ”The Lean Thinking House” -kaavion pohjakiven kautta koko yrityksen toiminnan kattavana, pitkäjänteistä sitoutumista edellyttävänä toimintamallina: ”management applies and teaches lean thinking, and bases decisions on this long-term philosophy”. 
